@@ -1,11 +1,12 @@
 <?php
 
-use App\Http\Controllers\DemoController;
-use App\Http\Controllers\Registration;
+
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers;
-use App\Models\Customer;
-use App\Http\Controllers\CustomerController;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,16 +18,16 @@ use App\Http\Controllers\CustomerController;
 |
 */
 
-Route::get('/', [DemoController::class, 'index']);
-// Route::get('/about', SingleActionController::class);
-Route::get('/register', [Registration::class, 'index']);
-Route::post('/register', [Registration::class, 'register']);
-Route::get('/customer',function(){
-  $customers= Customer::all();
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/admin',[AdminController::class,'index']);
+Route::post('/login',[AdminController::class, 'login']);
+Route::get('/dashboard',[DashboardController::class,'index']);
+
+Route::get('/session', function(){
   echo "<pre>";
-  print_r($customers);
+  print_r(session()->all());
 });
 
-
-Route::get('/customer/register', [CustomerController::class, 'create'])->name('customer.register');
-Route::post('/customer/register', [CustomerController::class, 'store'])->name('customer.store');
+Route::get('/logout', function(){
+  session()->flush();
+});
