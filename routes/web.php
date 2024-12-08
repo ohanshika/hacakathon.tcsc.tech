@@ -26,11 +26,7 @@ Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::post('/register', [RegisrtController::class, 'save']);
 
 
-Route::get('/session', function () {
-  echo "<pre>";
-  print_r(session()->all());
-});
-
 Route::get('/logout', function () {
   session()->flush();
+  return redirect('/admin');
 });
