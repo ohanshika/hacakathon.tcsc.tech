@@ -4,6 +4,7 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RegisrtController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -19,15 +20,17 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 */
 
 Route::get('/', [HomeController::class, 'index']);
-Route::get('/admin',[AdminController::class,'index']);
-Route::post('/login',[AdminController::class, 'login']);
-Route::get('/dashboard',[DashboardController::class,'index']);
+Route::get('/admin', [AdminController::class, 'index']);
+Route::post('/login', [AdminController::class, 'login']);
+Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::post('/register', [RegisrtController::class, 'save']);
 
-Route::get('/session', function(){
+
+Route::get('/session', function () {
   echo "<pre>";
   print_r(session()->all());
 });
 
-Route::get('/logout', function(){
+Route::get('/logout', function () {
   session()->flush();
 });

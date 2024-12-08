@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Participant;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -10,10 +11,16 @@ class DashboardController extends Controller
     {
         // Check if the session has the username
         if (session()->has('username')) {
-            return view('dashboard'); // If username exists in session, show dashboard
+            // Retrieve all participants from the database
+            $participants = Participant::all();
+
+            // Pass the data to the view using compact
+            return view('dashboard', compact('participants'));
         } else {
-            return redirect('/admin'); // Otherwise, redirect to login page
+            // If session does not have the username, redirect to the login page
+            return redirect('/admin');
         }
     }
-    
+
+
 }
