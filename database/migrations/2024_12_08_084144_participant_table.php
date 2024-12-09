@@ -37,6 +37,7 @@ return new class extends Migration {
             $table->string('member3_phoneno')->nullable();
             $table->string('member3_email')->nullable();
             $table->string('transaction_id');
+            $table->boolean('mail_sent')->default(0);
             $table->timestamps();
         });
 

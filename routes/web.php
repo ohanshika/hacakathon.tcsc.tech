@@ -24,7 +24,7 @@ Route::get('/admin', [AdminController::class, 'index']);
 Route::post('/login', [AdminController::class, 'login']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::post('/register', [RegisrtController::class, 'save']);
-
+Route::get('/registersuccess', [RegisrtController::class, 'sendmail']);
 
 Route::get('/logout', function () {
   session()->flush();

@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\RegisterMail;
 use App\Models\Participant;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class RegisrtController extends Controller
 {
@@ -46,5 +48,17 @@ class RegisrtController extends Controller
 
         // Redirect to a success page or back to the form with a success message
         return redirect('/')->with('success', 'Registration completed successfully You will recieve a Mail!');
+    }
+
+    public function sendmail(Request $request)
+    {
+        echo "<pre>";
+        $data = json_decode($request->get('data'), true);
+        $to = $data['leader_email'];
+        $subject = "Registration Sucessfull";
+        Mail::to($to)->send(new RegisterMail($data, $subject));
+        Participant::where('Group_id', $data['Group_id'])->update(['mail_sent' => 1]);
+        return redirect()->back();
+
     }
 }

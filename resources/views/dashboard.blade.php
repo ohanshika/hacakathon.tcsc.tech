@@ -71,8 +71,11 @@
                             <td class="border border-gray-600 px-4 py-2">{{ $participant->transaction_id }}</td>
                             <td class="border border-gray-600 px-4 py-2">{{ $participant->created_at }}</td>
                             <td class="border border-gray-600 px-4 py-2">
-                                <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors">
-                                    <a href="#">MAIL</a>
+                                <button
+                                    class="{{ $participant->mail_sent ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700' }} text-white px-4 py-2 rounded transition-colors">
+                                    <a href="{{ url('registersuccess') }}?data={{ $participant }}">
+                                        {{ $participant->mail_sent ? 'Verified' : 'Not Verified' }}
+                                    </a>
                                 </button>
                             </td>
                         </tr>

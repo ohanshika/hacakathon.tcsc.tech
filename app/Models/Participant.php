@@ -41,5 +41,6 @@ class Participant extends Model
         'member3_phoneno',
         'member3_email',
         'transaction_id',
+        'mail_sent',
     ];
 }
