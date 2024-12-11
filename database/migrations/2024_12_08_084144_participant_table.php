@@ -7,14 +7,14 @@ use Illuminate\Support\Facades\DB;
 
 return new class extends Migration {
     /**
-     * Run the migrations.
+     * Run the migrations.  
      *
      * @return void
      */
     public function up()
     {
         Schema::create('Participant', function (Blueprint $table) {
-            $table->id('Group_id'); // Auto-increment primary key
+            $table->id('Group_id');
             $table->string('college_name');
             $table->string('leader_name');
             $table->string('leader_class');

@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisrtController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -25,8 +26,12 @@ Route::post('/login', [AdminController::class, 'login']);
 Route::get('/dashboard', [DashboardController::class, 'index']);
 Route::post('/register', [RegisrtController::class, 'save']);
 Route::get('/registersuccess', [RegisrtController::class, 'sendmail']);
+Route::get('/testlogin', [TestController::class, 'index']);
+Route::post('/testlogin', [TestController::class, 'login']);
+Route::get('/teststarted', [TestController::class, 'viewPage']);
+Route::post('/submittest', [TestController::class, 'submit']);
 
 Route::get('/logout', function () {
   session()->flush();
-  return redirect('/admin');
+  return redirect('/');
 });

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\RegisterMail;
 use App\Models\Participant;
+use App\Models\TestTable;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -58,7 +59,13 @@ class RegisrtController extends Controller
         $subject = "Registration Sucessfull";
         Mail::to($to)->send(new RegisterMail($data, $subject));
         Participant::where('Group_id', $data['Group_id'])->update(['mail_sent' => 1]);
+        TestTable::firstOrCreate(
+            ['leader_name' => $data['leader_name'], 'Group_id' => $data['Group_id']],
+            [
+                'test_taken' => 0,
+                'total' => 0,
+            ]
+        );
         return redirect()->back();
-
     }
 }
