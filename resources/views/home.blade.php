@@ -21,6 +21,7 @@
                 @csrf
                 <!-- Section 1 -->
                 <div class="form-section active">
+                    <h2 class="text-xl font-semibold mb-4">Leader Details</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="mb-4">
                             <label for="collegeName" class="block text-sm font-medium">College Name</label>
@@ -61,6 +62,7 @@
 
                 <!-- Section 2 -->
                 <div class="form-section hidden">
+                    <h2 class="text-xl font-semibold mb-4">Team Member 1 Details</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="mb-4">
                             <label for="member1Name" class="block text-sm font-medium">Member 1 Name</label>
@@ -96,31 +98,32 @@
                     </div>
                 </div>
 
-                <!-- Section 3, Section 4 (Repeat similar to Section 2 for other members) -->
+                <!-- Section 3 -->
                 <div class="form-section hidden">
+                    <h2 class="text-xl font-semibold mb-4">Team Member 2 Details</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="mb-4">
-                            <label for="member1Name" class="block text-sm font-medium">Member 2 Name</label>
+                            <label for="member2Name" class="block text-sm font-medium">Member 2 Name</label>
                             <input type="text" id="member2Name" name="member2Name"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1Class" class="block text-sm font-medium">Class</label>
+                            <label for="member2Class" class="block text-sm font-medium">Class</label>
                             <input type="text" id="member2Class" name="member2Class"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1RollNo" class="block text-sm font-medium">Roll No</label>
+                            <label for="member2RollNo" class="block text-sm font-medium">Roll No</label>
                             <input type="text" id="member2RollNo" name="member2RollNo"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1PhoneNo" class="block text-sm font-medium">Phone No</label>
+                            <label for="member2PhoneNo" class="block text-sm font-medium">Phone No</label>
                             <input type="tel" id="member2PhoneNo" name="member2PhoneNo"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1Email" class="block text-sm font-medium">Email</label>
+                            <label for="member2Email" class="block text-sm font-medium">Email</label>
                             <input type="email" id="member2Email" name="member2Email"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
@@ -133,31 +136,33 @@
                     </div>
                 </div>
 
+                <!-- Section 4 -->
                 <div class="form-section hidden">
+                    <h2 class="text-xl font-semibold mb-4">Team Member 3 Details</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="mb-4">
-                            <label for="member1Name" class="block text-sm font-medium">Member 3 Name</label>
+                            <label for="member3Name" class="block text-sm font-medium">Member 3 Name</label>
                             <input type="text" id="member3Name" name="member3Name"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
                             <label for="member3Class" class="block text-sm font-medium">Class</label>
-                            <input type="text" id="member1Class" name="member3Class"
+                            <input type="text" id="member3Class" name="member3Class"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1RollNo" class="block text-sm font-medium">Roll No</label>
-                            <input type="text" id="member1RollNo" name="member3RollNo"
+                            <label for="member3RollNo" class="block text-sm font-medium">Roll No</label>
+                            <input type="text" id="member3RollNo" name="member3RollNo"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1PhoneNo" class="block text-sm font-medium">Phone No</label>
-                            <input type="tel" id="member1PhoneNo" name="member3PhoneNo"
+                            <label for="member3PhoneNo" class="block text-sm font-medium">Phone No</label>
+                            <input type="tel" id="member3PhoneNo" name="member3PhoneNo"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                         <div class="mb-4">
-                            <label for="member1Email" class="block text-sm font-medium">Email</label>
-                            <input type="email" id="member1Email" name="member3Email"
+                            <label for="member3Email" class="block text-sm font-medium">Email</label>
+                            <input type="email" id="member3Email" name="member3Email"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
                     </div>
@@ -169,9 +174,11 @@
                     </div>
                 </div>
 
-
                 <!-- Section 5 -->
                 <div class="form-section hidden">
+                    <h2 class="text-xl font-semibold mb-4">Payment Process</h2>
+                    <p class="mb-4 text-sm text-gray-300">Please pay <strong class="text-white">200 Rupees</strong> and
+                        enter the Transaction ID below.</p>
                     <div class="mb-4">
                         <img src="https://via.placeholder.com/400x200" alt="Hackathon" class="rounded-lg w-full">
                     </div>
