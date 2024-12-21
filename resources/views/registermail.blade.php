@@ -128,6 +128,9 @@
             <td>{{ $msg['updated_at'] }}</td>
         </tr>
     </table>
+
+    <h2>Take aptitude test on :- <a href="https://hackathon.tcsc.tech/testlogin"> Click</a></h2>
+    <p>Password is your group id</p>
 </body>
 
 </html>

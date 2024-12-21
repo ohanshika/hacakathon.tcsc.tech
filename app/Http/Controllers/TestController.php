@@ -53,10 +53,10 @@ class TestController extends Controller
     {
         // Define the correct answers for validation
         $correctAnswers = [
-            'answer1' => 'Red',
-            'answer2' => 'Dog',
-            'answer3' => 'Coffee',
-            'answer4' => 'Cat',
+            'answer1' => '240',
+            'answer2' => '32',
+            'answer3' => '7.5',
+            'answer4' => '1/3',
             'answer5' => 'Juice',
             'answer6' => 'Blue',
             'answer7' => 'Bird',
@@ -80,28 +80,29 @@ class TestController extends Controller
         $test_taken = 1;
 
         // Validate the request (ensure all answers are strings or null)
-        $validated = $request->validate([
-            'answer1' => 'nullable|string',
-            'answer2' => 'nullable|string',
-            'answer3' => 'nullable|string',
-            'answer4' => 'nullable|string',
-            'answer5' => 'nullable|string',
-            'answer6' => 'nullable|string',
-            'answer7' => 'nullable|string',
-            'answer8' => 'nullable|string',
-            'answer9' => 'nullable|string',
-            'answer10' => 'nullable|string',
-            'answer11' => 'nullable|string',
-            'answer12' => 'nullable|string',
-            'answer13' => 'nullable|string',
-            'answer14' => 'nullable|string',
-            'answer15' => 'nullable|string',
-            'answer16' => 'nullable|string',
-            'answer17' => 'nullable|string',
-            'answer18' => 'nullable|string',
-            'answer19' => 'nullable|string',
-            'answer20' => 'nullable|string',
-        ]);
+        $correctAnswers = [
+            'question1' => '240',
+            'question2' => '32',
+            'question3' => '7.5',
+            'question4' => '1/3',
+            'question5' => '6',
+            'question6' => '35',
+            'question7' => '12',
+            'question8' => '29',
+            'question9' => '30',
+            'question10' => '40',
+            'question11' => '6',
+            'question12' => '2',
+            'question13' => 'Jupiter',
+            'question14' => '56',
+            'question15' => 'Paris',
+            'question16' => '9',
+            'question17' => '100',
+            'question18' => '7',
+            'question19' => '40',
+            'question20' => 'H2O',
+        ];
+
 
         $testRecord = TestTable::where('Group_id', $groupId)->first();
 
@@ -111,7 +112,7 @@ class TestController extends Controller
         }
 
         for ($i = 1; $i <= 20; $i++) {
-            $data['Q' . $i] = $data['answer' . $i];
+            $data['Q' . $i] = $data['question' . $i];
         }
 
         $data['total'] = array_sum(array_slice($data, 1, 20)); // Sum up Q1 to Q20 scores
