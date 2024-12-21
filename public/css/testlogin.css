@@ -1,0 +1,71 @@
+.mainbody{
+    background-color: black;
+    background-image: url("/img/test/mainbg.jpg");
+    background-position: bottom;
+}
+.login_layout{
+    opacity: .85;
+    background: transparent;
+    backdrop-filter: blur(20px);
+    transition: ease-in-out 1s;
+    box-shadow: -8px -8px 15px lightblue;
+}
+.login_layout:hover{
+    box-shadow: 8px 8px 15px lightblue;
+    transition: ease-in-out 1s;
+}
+.login_layout_fade{
+    animation: fadeup 2s;
+}
+@keyframes fadeup{
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100%{
+        opacity: .85;
+        transform: translateY(0px);
+    }
+}
+.header{
+    animation: fadedown 1s;
+    font-size: 25px;
+}
+@keyframes fadedown{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: .85;
+        transform: translateY(0px);
+    }
+}
+.btn:hover{
+    box-shadow: 5px 5px 15px skyblue;
+    animation: btn 1s infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes btn{
+    0%{
+        transform: translateY(3px);
+    }
+    50%{
+        transform: translateY(-3px);
+    }
+    100%{
+        transform: translateY(3px);
+    }
+}
+.leaderinp:hover{
+    box-shadow: 6px 6px 15px rgb(104, 210, 252);
+    border: 2px;
+    border-style: groove;
+    border-color: rgb(104, 210, 252);
+}
+.groupinp:hover{
+    box-shadow: 6px 6px 15px rgb(104, 210, 252);
+    border: 2px;
+    border-style: groove;
+    border-color: rgb(104, 210, 252);
+}
