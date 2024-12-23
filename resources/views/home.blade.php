@@ -180,7 +180,7 @@
                     <p class="mb-4 text-sm text-gray-300">Please pay <strong class="text-white">200 Rupees</strong> and
                         enter the Transaction ID below.</p>
                     <div class="mb-4">
-                        <img src="https://via.placeholder.com/400x200" alt="Hackathon" class="rounded-lg w-full">
+                        <img src="sc.png" style="width:500px" alt="Hackathon" class="rounded-lg w-full">
                     </div>
                     <div class="mb-4">
                         <label for="transactionId" class="block text-sm font-medium">Transaction ID</label>
