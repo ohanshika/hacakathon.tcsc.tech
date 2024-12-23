@@ -227,7 +227,7 @@
             const inputs = sections[currentSection].querySelectorAll('input[required]');
             for (let input of inputs) {
                 if (!input.value) {
-                    alert('Please fill all required fields before proceeding.');
+                    alert('One member is compulory please fill leader detail');
                     return;
                 }
             }
