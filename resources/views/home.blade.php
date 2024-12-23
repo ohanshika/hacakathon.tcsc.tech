@@ -62,10 +62,10 @@
 
                 <!-- Section 2 -->
                 <div class="form-section hidden">
-                    <h2 class="text-xl font-semibold mb-4">Team Member 1 Details</h2>
+                    <h2 class="text-xl font-semibold mb-4">Team Member 1 Details (Optional)</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="mb-4">
-                            <label for="member1Name" class="block text-sm font-medium">Member 1 Name (Optional)</label>
+                            <label for="member1Name" class="block text-sm font-medium">Member 1 Name</label>
                             <input type="text" id="member1Name" name="member1Name"
                                 class="w-full mt-1 p-2 bg-gray-700 rounded">
                         </div>
