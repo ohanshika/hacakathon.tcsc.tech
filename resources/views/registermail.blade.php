@@ -21,6 +21,8 @@
 </head>
 
 <body>
+    <h1>TCSC Coding Club</h1>
+    <p>Thanku for Registration You will regive the problem statement on 28th Dec 2024 on whatapp group</p>
     <h2>Registration Details</h2>
     <table>
         <tr>
@@ -129,7 +131,7 @@
         </tr>
     </table>
 
-    <h2>Take aptitude test on :- <a href="https://hackathon.tcsc.tech/testlogin"> Click</a></h2>
+    <h2>Take aptitude test on :- <a href="https://hackathon.tcsc.tech/testlogin"> Click (Optional)</a></h2>
     <p>Password is your group id</p>
 </body>
 
