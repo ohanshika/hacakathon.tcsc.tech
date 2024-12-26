@@ -22,7 +22,7 @@
 
 <body>
     <h1>TCSC Coding Club</h1>
-    <p>Thanku for Registration You will regive the problem statement on 28th Dec 2024 on whatapp group</p>
+    <p>Thank you for registering. You will receive the problem statement on 28th Dec 2024 in the WhatsApp group.</p>
     <h2>Registration Details</h2>
     <table>
         <tr>
