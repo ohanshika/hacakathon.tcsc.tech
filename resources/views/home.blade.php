@@ -29,7 +29,13 @@
 
         p {
             font-size: 1.2rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .dates {
+            margin-top: 1rem;
+            font-size: 1rem;
+            color: #6c757d;
         }
 
         .btn {
@@ -52,6 +58,10 @@
     <div class="container">
         <h1>Registration Closed</h1>
         <p>We're sorry, but the registration period has ended. Please check back later for updates.</p>
+        <div class="dates">
+            <p><strong>Project Submission Date:</strong> 9th January 2025</p>
+            <p><strong>Event Date:</strong> 15th January 2025</p>
+        </div>
         <!-- <a href="/" class="btn">Return to Home</a> -->
     </div>
 </body>
