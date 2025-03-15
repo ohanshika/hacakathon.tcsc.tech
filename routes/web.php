@@ -2,6 +2,7 @@
 
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Certificate;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\RegisrtController;
@@ -30,6 +31,7 @@ Route::get('/testlogin', [TestController::class, 'index']);
 Route::post('/testlogin', [TestController::class, 'login']);
 Route::get('/teststarted', [TestController::class, 'viewPage']);
 Route::post('/submittest', [TestController::class, 'submit']);
+Route::get('/certificate', [Certificate::class, 'generate']);
 
 Route::get('/logout', function () {
   session()->flush();

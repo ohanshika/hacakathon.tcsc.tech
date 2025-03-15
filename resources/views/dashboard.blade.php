@@ -40,7 +40,8 @@
                         <th class="border border-gray-600 px-4 py-2">Member 3 Email</th>
                         <th class="border border-gray-600 px-4 py-2">Transaction ID</th>
                         <th class="border border-gray-600 px-4 py-2">Created At</th>
-                        <th class="border border-gray-600 px-4 py-2">Mail</th>
+                        <th class="border border-gray-600 px-4 py-2">Mail Sender</th>
+                        <th class="border border-gray-600 px-4 py-2">Certificate</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -75,6 +76,14 @@
                                     class="{{ $participant->mail_sent ? 'bg-green-600 hover:bg-green-700' : 'bg-red-600 hover:bg-red-700' }} text-white px-4 py-2 rounded transition-colors">
                                     <a href="{{ url('registersuccess') }}?data={{ $participant }}">
                                         {{ $participant->mail_sent ? 'Verified' : 'Not Verified' }}
+                                    </a>
+                                </button>
+                            </td>
+                            <td class="border border-gray-600 px-4 py-2">
+                                <button
+                                    class="bg-yellow-600 hover:bg-green-700 text-white px-4 py-2 rounded transition-colors">
+                                    <a href="{{ url('certificate') }}?data={{ json_encode($participant) }}" target="_blank">
+                                        Generate
                                     </a>
                                 </button>
                             </td>
